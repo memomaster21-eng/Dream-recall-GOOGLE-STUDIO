@@ -1,0 +1,6 @@
+{
+  "name": "Dream Recall",
+  "description": "Dream journaling, lucid dreaming, memory recall, and subconscious exploration app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

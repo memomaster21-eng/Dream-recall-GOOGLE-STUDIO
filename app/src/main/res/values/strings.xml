@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Dream Recall</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Dream Recall</string>
+    <string name="onboarding_subtitle">Awaken your subconscious.</string>
+    <string name="feature_1_title">Capture Memory</string>
+    <string name="feature_1_desc">Instantly record your dreams upon waking.</string>
+    <string name="feature_2_title">Understand Patterns</string>
+    <string name="feature_2_desc">Analyze themes, moods, and recall quality.</string>
+    <string name="feature_3_title">Lucid Control</string>
+    <string name="feature_3_desc">Track and improve your lucid dreaming rate.</string>
+    <string name="begin_recording">Begin Recording Dreams</string>
+
+    <!-- Home Screen -->
+    <string name="good_morning">Good Morning</string>
+    <string name="home_subtitle">Recall your subconscious journeys.</string>
+    <string name="total_dreams">Total Dreams</string>
+    <string name="lucid_dreams">Lucid Dreams</string>
+    <string name="recent_entries">Recent Entries</string>
+    <string name="no_dreams">No dreams recorded yet.\nStart your journal today.</string>
+    <string name="untitled_dream">Untitled Dream</string>
+    <string name="lucid_tag">Lucid</string>
+    <string name="nightmare_tag">Nightmare</string>
+    <string name="add_dream_desc">Add Dream</string>
+
+    <!-- Add Dream Screen -->
+    <string name="record_dream">Record Dream</string>
+    <string name="save">Save</string>
+    <string name="dream_title_label">Dream Title (Optional)</string>
+    <string name="dream_content_label">What happened?</string>
+    <string name="mood_label">Mood</string>
+    <string name="vividness_label">Vividness: %1$d/10</string>
+    <string name="tags_label">Tags (comma separated)</string>
+    <string name="tags_placeholder">flying, water, falling</string>
+    <string name="lucid_dream_label">Lucid Dream</string>
+    <string name="nightmare_label">Nightmare</string>
+    
+    <string name="mood_peaceful">Peaceful</string>
+    <string name="mood_happy">Happy</string>
+    <string name="mood_neutral">Neutral</string>
+    <string name="mood_anxious">Anxious</string>
+    <string name="mood_scared">Scared</string>
+    <string name="mood_weird">Weird</string>
+
+    <!-- Dream Detail Screen -->
+    <string name="delete_dream_dialog_title">Delete Dream?</string>
+    <string name="delete_dream_dialog_desc">Are you sure you want to delete this memory?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="symbols_label">Symbols: %1$s</string>
+
+    <!-- General -->
+    <string name="back">Back</string>
+</resources>
