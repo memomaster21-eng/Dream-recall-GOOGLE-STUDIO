@@ -16,6 +16,9 @@ interface DreamDao {
     @Query("SELECT * FROM dreams WHERE id = :id")
     fun getDreamById(id: Int): Flow<Dream?>
 
+    @Query("SELECT * FROM dreams WHERE createdAt >= :timestamp ORDER BY RANDOM() LIMIT 1")
+    suspend fun getRandomDreamSince(timestamp: Long): Dream?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertDream(dream: Dream)
 
@@ -24,4 +27,16 @@ interface DreamDao {
 
     @Delete
     suspend fun deleteDream(dream: Dream)
+
+    @Query("SELECT * FROM sleep_sessions ORDER BY startTime DESC")
+    fun getAllSleepSessions(): Flow<List<SleepSession>>
+
+    @Query("SELECT * FROM sleep_sessions WHERE isCompleted = 0 ORDER BY startTime DESC LIMIT 1")
+    suspend fun getActiveSleepSession(): SleepSession?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertSleepSession(session: SleepSession)
+
+    @Update
+    suspend fun updateSleepSession(session: SleepSession)
 }

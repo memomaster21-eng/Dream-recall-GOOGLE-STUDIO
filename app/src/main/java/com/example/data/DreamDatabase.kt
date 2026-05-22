@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Dream::class], version = 1, exportSchema = false)
+@Database(entities = [Dream::class, SleepSession::class], version = 4, exportSchema = false)
 abstract class DreamDatabase : RoomDatabase() {
     abstract fun dreamDao(): DreamDao
 
@@ -19,7 +19,9 @@ abstract class DreamDatabase : RoomDatabase() {
                     context.applicationContext,
                     DreamDatabase::class.java,
                     "dream_database"
-                ).build()
+                )
+                  .fallbackToDestructiveMigration()
+                  .build()
                 INSTANCE = instance
                 instance
             }

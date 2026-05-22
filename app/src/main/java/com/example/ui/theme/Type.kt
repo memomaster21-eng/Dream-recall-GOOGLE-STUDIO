@@ -15,61 +15,50 @@ val provider = GoogleFont.Provider(
     certificates = R.array.com_google_android_gms_fonts_certs
 )
 
-val fontName = GoogleFont("Cairo")
+val fontName = GoogleFont("Plus Jakarta Sans")
 
-val cairoFontFamily = FontFamily(
+val appFontFamily = FontFamily(
     Font(googleFont = fontName, fontProvider = provider),
+    Font(googleFont = fontName, fontProvider = provider, weight = FontWeight.Medium),
     Font(googleFont = fontName, fontProvider = provider, weight = FontWeight.SemiBold),
     Font(googleFont = fontName, fontProvider = provider, weight = FontWeight.Bold)
 )
 
 val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = cairoFontFamily,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    ),
-    bodyMedium = TextStyle(
-        fontFamily = cairoFontFamily,
-        fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
-        lineHeight = 20.sp,
-        letterSpacing = 0.25.sp
-    ),
-    titleLarge = TextStyle(
-        fontFamily = cairoFontFamily,
+    headlineLarge = TextStyle(
+        fontFamily = appFontFamily,
         fontWeight = FontWeight.Bold,
-        fontSize = 28.sp,
-        lineHeight = 36.sp,
-        letterSpacing = 0.sp
-    ),
-    titleMedium = TextStyle(
-        fontFamily = cairoFontFamily,
-        fontWeight = FontWeight.SemiBold,
-        fontSize = 20.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
+        fontSize = 36.sp
     ),
     headlineMedium = TextStyle(
-        fontFamily = cairoFontFamily,
+        fontFamily = appFontFamily,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 24.sp,
-        lineHeight = 32.sp
+        fontSize = 28.sp
     ),
-    labelMedium = TextStyle(
-        fontFamily = cairoFontFamily,
+    titleLarge = TextStyle(
+        fontFamily = appFontFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 22.sp
+    ),
+    titleMedium = TextStyle(
+        fontFamily = appFontFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 20.sp
+    ),
+    bodyLarge = TextStyle(
+        fontFamily = appFontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+        fontSize = 16.sp
+    ),
+    bodyMedium = TextStyle(
+        fontFamily = appFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp
     ),
     labelSmall = TextStyle(
-        fontFamily = cairoFontFamily,
+        fontFamily = appFontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+        fontSize = 13.sp,
+        letterSpacing = 1.5.sp
     )
 )

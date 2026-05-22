@@ -13,6 +13,19 @@ data class Dream(
     val vividness: Float = 5f,
     val isLucid: Boolean = false,
     val isNightmare: Boolean = false,
+    val isRecurring: Boolean = false,
+    val isFavorite: Boolean = false,
+    val dreamType: String = "عادي",
     val tags: String = "",
-    val sleepDuration: Float = 8f
+    val sleepDuration: Float = 8f,
+    val aiAnalysis: String? = null
+)
+
+@Entity(tableName = "sleep_sessions")
+data class SleepSession(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val startTime: Long,
+    val endTime: Long? = null,
+    val fazzaTimes: String = "[]", // JSON list of Long timestamps
+    val isCompleted: Boolean = false
 )

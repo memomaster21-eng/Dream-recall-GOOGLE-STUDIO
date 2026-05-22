@@ -7,6 +7,8 @@ class DreamRepository(private val dao: DreamDao) {
 
     fun getDreamById(id: Int): Flow<Dream?> = dao.getDreamById(id)
 
+    suspend fun getRandomDreamSince(timestamp: Long): Dream? = dao.getRandomDreamSince(timestamp)
+
     suspend fun insertDream(dream: Dream) {
         dao.insertDream(dream)
     }
@@ -17,5 +19,17 @@ class DreamRepository(private val dao: DreamDao) {
 
     suspend fun deleteDream(dream: Dream) {
         dao.deleteDream(dream)
+    }
+
+    val allSleepSessions: Flow<List<SleepSession>> = dao.getAllSleepSessions()
+
+    suspend fun getActiveSleepSession(): SleepSession? = dao.getActiveSleepSession()
+
+    suspend fun insertSleepSession(session: SleepSession) {
+        dao.insertSleepSession(session)
+    }
+
+    suspend fun updateSleepSession(session: SleepSession) {
+        dao.updateSleepSession(session)
     }
 }

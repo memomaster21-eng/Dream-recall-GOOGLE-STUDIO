@@ -54,5 +54,9 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
+    implementation("com.google.ai.client.generativeai:generativeai:0.8.0")
     implementation("androidx.compose.ui:ui-text-google-fonts:1.6.1")
+    implementation(libs.work.runtime.ktx)
+    implementation(libs.gson)
+    implementation("androidx.compose.material:material-icons-extended:1.6.1")
 }
